@@ -39,6 +39,14 @@ if st.button("Predict"):
         category = model.predict(vector_input)[0]
         st.success(f"Predicted Category: **{category}**")
 
+        matched_categories = ['Data Science','HR','Advocate', 'Arts', 'Web Designing', 'Mechanical Engineer', 
+                          'Sales', 'Health and fitness', 'Civil Engineer',
+                          'Java Developer', 'Business Analyst', 'SAP Developer', 'Automation Testing',
+                          'Electrical Engineering', 'Operations Manager', 'Python Developer',
+                          'DevOps Engineer', 'Network Security Engineer', 'PMO', 'Database', 'Hadoop',
+                          'ETL Developer', 'DotNet Developer', 'Blockchain', 'Testing']
+
+
         # Suppose your model predicts a number
         predicted_number = model.predict(vector_input)[0]  # e.g., 0, 1, 2 ...
         
@@ -61,6 +69,7 @@ if st.button("Predict"):
             st.error(f"Resume Status: **REJECTED** ({skills_matched} skills matched)")
 
 # Example: your model predicts which categories matched
+
 
 
 
