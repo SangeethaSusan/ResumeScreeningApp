@@ -50,3 +50,4 @@ if st.button("Predict"):
             st.error(f"Resume Status: **REJECTED** ({skills_matched} skills matched)")
 
 
+
