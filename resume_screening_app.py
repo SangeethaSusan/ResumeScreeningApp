@@ -37,29 +37,9 @@ if st.button("Predict"):
         vector_input = vectorizer.transform([clean_text])
         # Predict category
         category = model.predict(vector_input)[0]
-        st.success(f"Predicted Category: **{category}**")
+        st.success(f"Matched Category: **{category}**")
 
-        matched_categories = ['Data Science','HR','Advocate', 'Arts', 'Web Designing', 'Mechanical Engineer', 
-                          'Sales', 'Health and fitness', 'Civil Engineer',
-                          'Java Developer', 'Business Analyst', 'SAP Developer', 'Automation Testing',
-                          'Electrical Engineering', 'Operations Manager', 'Python Developer',
-                          'DevOps Engineer', 'Network Security Engineer', 'PMO', 'Database', 'Hadoop',
-                          'ETL Developer', 'DotNet Developer', 'Blockchain', 'Testing']
-
-
-        # Suppose your model predicts a number
-        predicted_number = model.predict(vector_input)[0]  # e.g., 0, 1, 2 ...
-        
-        # Map to name
-        predicted_category_name = matched_categories[predicted_number]
-        
-        st.success(f"Predicted Category: **{predicted_category_name}**")
-
-        st.subheader("Matched Category")
-        st.write(f"- {predicted_category_name}")
-
-
-
+       
 
         # Check criteria
         skills_matched = check_skills(clean_text)
@@ -71,7 +51,22 @@ if st.button("Predict"):
 # Example: your model predicts which categories matched
 
 
+     matched_categories = ['Data Science','HR','Advocate', 'Arts', 'Web Designing', 'Mechanical Engineer', 
+                          'Sales', 'Health and fitness', 'Civil Engineer',
+                          'Java Developer', 'Business Analyst', 'SAP Developer', 'Automation Testing',
+                          'Electrical Engineering', 'Operations Manager', 'Python Developer',
+                          'DevOps Engineer', 'Network Security Engineer', 'PMO', 'Database', 'Hadoop',
+                          'ETL Developer', 'DotNet Developer', 'Blockchain', 'Testing']
 
+    
+        # Suppose your model predicts a number
+        predicted_number = model.predict(vector_input)[0]  # e.g., 0, 1, 2 ...
+
+        for predicted_category_name in predicted_number:
+        # Map to name
+            predicted_category_name = matched_categories[predicted_number]
+        
+            st.success(f"Matched Category: **{predicted_category_name}**")
 
 
 
