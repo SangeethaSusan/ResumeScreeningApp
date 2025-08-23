@@ -39,7 +39,16 @@ if st.button("Predict"):
         category = model.predict(vector_input)[0]
         st.success(f"Matched Category: **{category}**")
 
-        matched_categories = ['Data Science','HR','Advocate', 'Arts', 'Web Designing', 'Mechanical Engineer', 
+
+        # Suppose 'category' is a list of matched categories
+        matched_categories = category  # if model predicts multiple labels
+
+        st.subheader("Matched Categories")
+        for cat in matched_categories:
+            st.write(f"- {cat}")
+
+
+       ''' matched_categories = ['Data Science','HR','Advocate', 'Arts', 'Web Designing', 'Mechanical Engineer', 
                               'Sales', 'Health and fitness', 'Civil Engineer',
                               'Java Developer', 'Business Analyst', 'SAP Developer', 'Automation Testing',
                               'Electrical Engineering', 'Operations Manager', 'Python Developer',
@@ -50,10 +59,10 @@ if st.button("Predict"):
             # Suppose your model predicts a number
         predicted_number = model.predict(vector_input)[0]  # e.g., 0, 1, 2 ...
     
-        for predicted_category_name in matched_categories :
-            predicted_category_name = matched_categories[predicted_number]
+        
+        predicted_category_name = matched_categories[predicted_number]
             
-            st.success(f"Matched Category: **{predicted_category_name}**")
+        st.success(f"Matched Category: **{predicted_category_name}**")'''
 
 
         # Check criteria
@@ -66,6 +75,7 @@ if st.button("Predict"):
 
 
         
+
 
 
 
