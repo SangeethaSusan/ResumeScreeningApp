@@ -36,16 +36,14 @@ if st.button("Predict"):
         # Vectorize
         vector_input = vectorizer.transform([clean_text])
         # Predict category
+        category_name = ['Data Science', 'HR', 'Advocate', 'Arts' ,'Web Designing',
+                         'Mechanical Engineer' ,'Sales', 'Health and fitness', 'Civil Engineer',
+                         'Java Developer', 'Business Analyst', 'SAP Developer', 'Automation Testing',
+                         'Electrical Engineering', 'Operations Manager', 'Python Developer',
+                         'DevOps Engineer', 'Network Security Engineer', 'PMO', 'Database', 'Hadoop',
+                         'ETL Developer', 'DotNet Developer', 'Blockchain' ,'Testing']
         category = model.predict(vector_input)[0]
-        st.success(f"Matched Category: **{category}**")
-
-
-        # Suppose 'category' is a list of matched categories
-        matched_categories = category  # if model predicts multiple labels
-
-        st.subheader("Matched Categories")
-        for cat in range(0,26):
-            st.write(f"- {cat}")
+        st.success(f"Matched Category: **{category_name}**")
 
 
         # Check criteria
@@ -54,21 +52,3 @@ if st.button("Predict"):
             st.success(f"Resume Status: **ACCEPTED** ({skills_matched} skills matched)")
         else:
             st.error(f"Resume Status: **REJECTED** ({skills_matched} skills matched)")
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
