@@ -50,7 +50,7 @@ if st.button("Predict"):
             # Suppose your model predicts a number
         predicted_number = model.predict(vector_input)[0]  # e.g., 0, 1, 2 ...
     
-        for predicted_category_name in predicted_number:
+        for predicted_category_name in matched_categories :
             predicted_category_name = matched_categories[predicted_number]
             
             st.success(f"Matched Category: **{predicted_category_name}**")
@@ -63,10 +63,10 @@ if st.button("Predict"):
         else:
             st.error(f"Resume Status: **REJECTED** ({skills_matched} skills matched)")
 
-# Example: your model predicts which categories matched
 
 
         
+
 
 
 
