@@ -44,7 +44,7 @@ if st.button("Predict"):
         matched_categories = category  # if model predicts multiple labels
 
         st.subheader("Matched Categories")
-        for cat in matched_categories:
+        for cat in range(0,26):
             st.write(f"- {cat}")
 
 
@@ -58,6 +58,7 @@ if st.button("Predict"):
 
 
         
+
 
 
 
