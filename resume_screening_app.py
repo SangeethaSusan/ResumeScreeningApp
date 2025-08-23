@@ -27,24 +27,6 @@ st.write("Paste the resume below to predict the category and check accept/reject
 
 resume_text = st.text_area("Enter Resume Text Here", height=300)
 
-# Custom green button using HTML/CSS
-button_clicked = st.markdown("""
-    <style>
-    .green-button {
-        background-color: #4CAF50;
-        color: white;
-        padding: 10px 25px;
-        text-align: center;
-        display: inline-block;
-        font-size: 16px;
-        border-radius: 8px;
-        border: none;
-        cursor: pointer;
-    }
-    </style>
-    <button class="green-button">Predict</button>
-""", unsafe_allow_html=True)
-
 #Button
 if st.button("Predict"):
     if resume_text.strip() == "":
@@ -74,6 +56,7 @@ if st.button("Predict"):
             st.success(f"Resume Status: **ACCEPTED** ({skills_matched} skills matched)")
         else:
             st.error(f"Resume Status: **REJECTED** ({skills_matched} skills matched)")
+
 
 
 
