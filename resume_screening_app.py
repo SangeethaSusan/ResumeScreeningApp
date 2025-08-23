@@ -6,7 +6,7 @@ import joblib
 import re
 
 # Load trained model and vectorizer
-model = joblib.load(linear_svc_model.pkl)         # Your trained Linear SVC
+model = joblib.load("linear_svc_model.pkl")         # Your trained Linear SVC
 vectorizer = joblib.load(tfidf_vectorizer.pkl)    # The TF-IDF vectorizer used in training
 
 # Define simple criteria for Accept/Reject
@@ -48,6 +48,7 @@ if st.button("Predict"):
             st.success(f"Resume Status: **ACCEPTED** ({skills_matched} skills matched)")
         else:
             st.error(f"Resume Status: **REJECTED** ({skills_matched} skills matched)")
+
 
 
 
