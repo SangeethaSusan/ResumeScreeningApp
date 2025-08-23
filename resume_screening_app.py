@@ -39,19 +39,7 @@ if st.button("Predict"):
         category = model.predict(vector_input)[0]
         st.success(f"Matched Category: **{category}**")
 
-       
-
-        # Check criteria
-        skills_matched = check_skills(clean_text)
-        if skills_matched >= MIN_SKILLS_MATCH:
-            st.success(f"Resume Status: **ACCEPTED** ({skills_matched} skills matched)")
-        else:
-            st.error(f"Resume Status: **REJECTED** ({skills_matched} skills matched)")
-
-# Example: your model predicts which categories matched
-
-
-         matched_categories = ['Data Science','HR','Advocate', 'Arts', 'Web Designing', 'Mechanical Engineer', 
+        matched_categories = ['Data Science','HR','Advocate', 'Arts', 'Web Designing', 'Mechanical Engineer', 
                               'Sales', 'Health and fitness', 'Civil Engineer',
                               'Java Developer', 'Business Analyst', 'SAP Developer', 'Automation Testing',
                               'Electrical Engineering', 'Operations Manager', 'Python Developer',
@@ -67,6 +55,19 @@ if st.button("Predict"):
                 predicted_category_name = matched_categories[predicted_number]
             
                 st.success(f"Matched Category: **{predicted_category_name}**")
+
+
+        # Check criteria
+        skills_matched = check_skills(clean_text)
+        if skills_matched >= MIN_SKILLS_MATCH:
+            st.success(f"Resume Status: **ACCEPTED** ({skills_matched} skills matched)")
+        else:
+            st.error(f"Resume Status: **REJECTED** ({skills_matched} skills matched)")
+
+# Example: your model predicts which categories matched
+
+
+        
 
 
 
