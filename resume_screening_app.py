@@ -1,6 +1,3 @@
-import os
-print("Current working directory:", os.getcwd())
-
 import streamlit as st
 import joblib
 import re
@@ -48,6 +45,20 @@ if st.button("Predict"):
             st.success(f"Resume Status: **ACCEPTED** ({skills_matched} skills matched)")
         else:
             st.error(f"Resume Status: **REJECTED** ({skills_matched} skills matched)")
+
+# Example: your model predicts which categories matched
+matched_categories = ['Data Science','HR','Advocate', 'Arts', 'Web Designing', 'Mechanical Engineer', 'Sales', 'Health and fitness', 'Civil Engineer',
+                      'Java Developer', 'Business Analyst', 'SAP Developer', 'Automation Testing',
+                      'Electrical Engineering', 'Operations Manager', 'Python Developer',
+                      'DevOps Engineer', 'Network Security Engineer', 'PMO', 'Database', 'Hadoop',
+                      'ETL Developer', 'DotNet Developer', 'Blockchain', 'Testing']
+
+st.subheader("Matched Categories")
+if matched_categories:
+    for category in matched_categories:
+        st.write(f"- {category}")
+else:
+    st.write("No categories matched.")
 
 
 
