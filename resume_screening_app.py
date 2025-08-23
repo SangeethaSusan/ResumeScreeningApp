@@ -46,7 +46,7 @@ if st.button("Predict"):
                               'ETL Developer', 'DotNet Developer', 'Blockchain', 'Testing']
 
         st.subheader("Matched Categories")
-        if matched_categories:
+        if matched_categories==category:
             for category in matched_categories:
                 st.write(f"- {category}")
         else:
@@ -61,6 +61,7 @@ if st.button("Predict"):
             st.error(f"Resume Status: **REJECTED** ({skills_matched} skills matched)")
 
 # Example: your model predicts which categories matched
+
 
 
 
