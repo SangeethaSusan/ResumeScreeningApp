@@ -43,8 +43,8 @@ if st.button("Predict"):
                          'DevOps Engineer', 'Network Security Engineer', 'PMO', 'Database', 'Hadoop',
                          'ETL Developer', 'DotNet Developer', 'Blockchain' ,'Testing']
         category = model.predict(vector_input)[0]
-        if category == category_name:
-            st.success(f"Matched Category: **{category}**")
+        if a.any(category) == category_name:
+            st.success(f"Matched Category: **{category_name}**")
         else:
             print('No Matching Category')
 
@@ -55,5 +55,6 @@ if st.button("Predict"):
             st.success(f"Resume Status: **ACCEPTED** ({skills_matched} skills matched)")
         else:
             st.error(f"Resume Status: **REJECTED** ({skills_matched} skills matched)")
+
 
 
