@@ -48,23 +48,6 @@ if st.button("Predict"):
             st.write(f"- {cat}")
 
 
-       ''' matched_categories = ['Data Science','HR','Advocate', 'Arts', 'Web Designing', 'Mechanical Engineer', 
-                              'Sales', 'Health and fitness', 'Civil Engineer',
-                              'Java Developer', 'Business Analyst', 'SAP Developer', 'Automation Testing',
-                              'Electrical Engineering', 'Operations Manager', 'Python Developer',
-                              'DevOps Engineer', 'Network Security Engineer', 'PMO', 'Database', 'Hadoop',
-                              'ETL Developer', 'DotNet Developer', 'Blockchain', 'Testing']
-    
-        
-            # Suppose your model predicts a number
-        predicted_number = model.predict(vector_input)[0]  # e.g., 0, 1, 2 ...
-    
-        
-        predicted_category_name = matched_categories[predicted_number]
-            
-        st.success(f"Matched Category: **{predicted_category_name}**")'''
-
-
         # Check criteria
         skills_matched = check_skills(clean_text)
         if skills_matched >= MIN_SKILLS_MATCH:
@@ -75,6 +58,7 @@ if st.button("Predict"):
 
 
         
+
 
 
 
