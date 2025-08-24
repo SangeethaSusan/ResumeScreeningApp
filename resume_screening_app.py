@@ -49,7 +49,7 @@ if st.button("Predict"):
             category = category_name[category_index]
             st.success(f"Matched Category: **{category}**")
         else:
-            st.warning(f"No Matching Category Found. Predicted index: {category_index}")
+            st.warning(f"No Matching Category Found. Predicted index: {category}")
 
 
         # Check criteria
@@ -58,6 +58,7 @@ if st.button("Predict"):
             st.success(f"Resume Status: **ACCEPTED** ({skills_matched} skills matched)")
         else:
             st.error(f"Resume Status: **REJECTED** ({skills_matched} skills matched)")
+
 
 
 
