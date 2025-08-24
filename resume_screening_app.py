@@ -45,7 +45,7 @@ if st.button("Predict"):
                          'ETL Developer', 'DotNet Developer', 'Blockchain' ,'Testing']
         category = model.predict(vector_input)[0]
        # Get the actual category name from the list
-        if 0 <= category_index < len(category_name):
+        if 0 <= category < len(category_name):
             category = category_name[category_index]
             st.success(f"Matched Category: **{category}**")
         else:
@@ -58,6 +58,7 @@ if st.button("Predict"):
             st.success(f"Resume Status: **ACCEPTED** ({skills_matched} skills matched)")
         else:
             st.error(f"Resume Status: **REJECTED** ({skills_matched} skills matched)")
+
 
 
 
