@@ -46,7 +46,7 @@ if st.button("Predict"):
         category = model.predict(vector_input)[0]
        # Get the actual category name from the list
         if 0 <= category < len(category_name):
-            category = category_name[category_index]
+            category = category_name[category]
             st.success(f"Matched Category: **{category}**")
         else:
             st.warning(f"No Matching Category Found. Predicted index: {category}")
@@ -58,6 +58,7 @@ if st.button("Predict"):
             st.success(f"Resume Status: **ACCEPTED** ({skills_matched} skills matched)")
         else:
             st.error(f"Resume Status: **REJECTED** ({skills_matched} skills matched)")
+
 
 
 
