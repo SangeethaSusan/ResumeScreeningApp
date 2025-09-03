@@ -7,7 +7,8 @@ model = joblib.load("lsvc_model.pkl")         # Your trained Linear SVC
 vectorizer = joblib.load("vetorizer.pkl")    # The TF-IDF vectorizer used in training
 
 # Define simple criteria for Accept/Reject
-REQUIRED_SKILLS = ['python', 'data analytics', 'machine learning', 'sql','r','tableau','powerbi','java','c#','c++','html']
+REQUIRED_SKILLS = ['python', 'data analytics', 'machine learning', 'sql','r','tableau','powerbi','java','c#','c++','html','big data','market analysis','nlp',
+                  'natural language processing','neural network','deep learning']
 MIN_SKILLS_MATCH = 2  # At least 2 skills should match
 
 # Preprocessing function
@@ -58,4 +59,5 @@ if st.button("Submit"):
             st.success(f"Resume Status: **ACCEPTED** ({skills_matched} skills matched)")
         else:
             st.error(f"Resume Status: **REJECTED** (only {skills_matched} skill matched) ")
+
 
