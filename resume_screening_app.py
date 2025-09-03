@@ -55,9 +55,10 @@ if st.button("Submit"):
         # Check criteria
         skills_matched = check_skills(clean_text)
         if skills_matched >= MIN_SKILLS_MATCH:
-            st.success(f"Resume Status: **ACCEPTED** ({skills_matched} skills matched)")
+            st.success(f"Resume Status: **ACCEPTED** ")
         else:
-            st.error(f"Resume Status: **REJECTED** ({skills_matched} skills matched)")
+            st.error(f"Resume Status: **REJECTED** ")
+
 
 
 
