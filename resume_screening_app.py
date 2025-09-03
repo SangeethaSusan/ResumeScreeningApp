@@ -22,7 +22,7 @@ def check_skills(text):
     return len(matches)
 
 # Streamlit app
-st.title("Resume Screening Mini Project")
+st.title("Resume Screening App")
 st.write("Paste the resume below to predict the category and check accept/reject status.")
 
 resume_text = st.text_area("Enter Resume Text Here", height=300)
@@ -55,12 +55,6 @@ if st.button("Submit"):
         # Check criteria
         skills_matched = check_skills(clean_text)
         if skills_matched >= MIN_SKILLS_MATCH:
-            st.success(f"Resume Status: **ACCEPTED** ({skills_matched}skills matched)")
+            st.success(f"Resume Status: **ACCEPTED** ({skills_matched} skills matched)")
         else:
-            st.error(f"Resume Status: **REJECTED** ({skills_matched}skills matched) ")
-
-
-
-
-
-
+            st.error(f"Resume Status: **REJECTED** ({skills_matched} skills matched) '(min 2 skills)'")
