@@ -5,5 +5,3 @@ Additionally, a user-friendly interface is developed with Streamlit to allow rec
 
 # Streamlit App
 https://resumescreeningapp-uuhcj5kr5k2bk6chkcxbsd.streamlit.app/
-
-<img width="1008" height="684" alt="image" src="https://github.com/user-attachments/assets/8bb93192-2222-4f1c-9052-a2859ac22f9b" />
